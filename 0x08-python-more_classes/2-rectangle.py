@@ -6,7 +6,7 @@ Defines a class Rectangle
 
 class Rectangle:
     """Representation of a rectangle"""
-    def __int__(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
         self.width = width
         self.height = height
@@ -45,6 +45,6 @@ class Rectangle:
         
         def perimeter(self):
             """returns the perimeter of the rectangle"""
-            if self.__width == 0nor self.__height == 0
+            if self.__width == 0 or self.__height == 0
                 return 0
             return (self.__width * 2) + (self.height * 2)
