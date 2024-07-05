@@ -15,17 +15,19 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
+    """Initialize an empty string to store the result"""
+    result = ""
+    """Iterate through each character in the input text"""
     s = 0
     while s < len(text):
-        print(text[s], end="")
-
-        """Check for punctuation marks"""
+        result += text[s]
         if text[s] in ".?:":
-            print("\n\n", end="")
-            s += 1
-
+            result += "\n\n"
             """Skip any following spaces"""
+            s += 1
             while s < len(text) and text[s] == ' ':
                 s += 1
             continue
         s += 1
+
+    print(result, end='')
